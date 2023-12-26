@@ -2,8 +2,10 @@
 const stripe = require('stripe')('sk_test_51OOilBCbCczEUrZJvQkXov7Zq7oMe8jnen908fHcJ8wnkc9GoRCptemIrD0r8G17KsH84ONK7xDmBs8znGurLIoz00AcYpu6WH');
 const express = require('express');
 const app = express();
+const cors = require("cors");
 const bodyParser = require('body-parser');
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
