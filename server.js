@@ -8,7 +8,9 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 const YOUR_DOMAIN = 'https://mofbeco.netlify.app/';
-
+app.get("/hello", async (req, res)=> {
+  res.json("Hello!")
+})
 app.post('/create-checkout-session', async (req, res) => {
 
   const productId = req.body.productID;
