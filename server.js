@@ -9,7 +9,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-const YOUR_DOMAIN = 'https://mofbeco.netlify.app/';
+const YOUR_DOMAIN = 'https://mofb.vercel.app/';
 app.get("/hello", async (req, res)=> {
   res.json("Hello!")
 })
